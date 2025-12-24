@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 Sawfar Festival NYE 2026 – Tickets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: fadeIn 0.8s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    input:focus {
+      outline: none;
+      border-color: #c33764;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .note {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 15px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>🎶 Sawfar Festival NYE 2026</h2>
+  <div class="subtitle">Limited tickets available · VIP almost sold out</div>
+
+  <form id="ticketForm">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="number" name="age" placeholder="Age" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <button type="submit">🎟 Buy Ticket – $49</button>
+  </form>
+
+  <div class="note">⚠️ Tickets are non-refundable</div>
+</div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby1NAWB7eo07Q3sIZjmddVWKvcviPkLXnLXF3Hl_uEys1hDhDM7GpIm1WyNnvhZ7io-/execPASTE_GOOGLE_SCRIPT_URL_HERE';
+  const form = document.getElementById('ticketForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(() => {
+        alert('🎉 Ticket reserved successfully! Check your phone for confirmation.');
+        form.reset();
+      })
+      .catch(error => alert('Error!', error.message));
+  });
+</script>
+
+</body>
+</html>
+
+
