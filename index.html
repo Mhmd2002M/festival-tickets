@@ -100,7 +100,7 @@
     e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(() => {
-        alert('Congratulations, you have booked the sunrise edition🔥🔥');
+        alert('🎉 Ticket reserved successfully! Check your phone for confirmation.');
         form.reset();
       })
       .catch(error => alert('Error!', error.message));
